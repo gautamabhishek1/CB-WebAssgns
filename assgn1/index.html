@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+         table {
+            border-collapse: collapse;
+            text-align: center;
+            width: 50%;
+        }
+        table td{
+            border-width: 2px;
+        }
+        form {
+            width: 50%;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        .submit {
+            width: 20em;
+            height: 2em;
+            margin: auto;
+            display: block;
+        }      
+       
+    </style>
+</head>
+<body>
+    
+<table align='center' border="5px" cellpadding="10px" >
+    <thead><tr>
+        <th colspan='6'><h2><u>TIMETABLE FOR G22</u></h2></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>Day/Period</b></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Mon</td>
+            <td colspan="2">FED</td>
+            <td bgcolor="grey">Break</td>
+            <td colspan="2">PA</td>
+        </tr>
+        <tr>
+            <td>Tue</td>
+            <td colspan="2">FED</td>
+            <td bgcolor="grey">Break</td>
+            <td colspan="2">PA</td>
+        </tr><tr>
+            <td>Wed</td>
+            <td colspan="2">NALR</td>
+            <td bgcolor="grey">Break</td>
+            <td>FED</td>
+            <td>PA</td>
+        </tr>
+        <tr>
+            <td>Thur</td>
+            <td colspan="2">PA</td>
+            <td bgcolor="grey">Break</td>
+            <td colspan="2">NALR</td>
+        </tr>
+        <tr>
+            <td>Fri</td>
+            <td colspan="3">NALR</td>
+            <td colspan="2" bgcolor="grey">Half-Day</td>
+        </tr>
+        <tr>
+            <td>Sat</td>
+            <td colspan="5" bgcolor="grey">Holiday</td>
+        </tr>
+    </tbody>
+</table>
+
+    <br><hr><br>
+<center>
+    <h1>Bio-Data</h1>
+    <form action="#">
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label for="fname">First Name: </label>
+        <input type="text" name='fname' required>&nbsp;&nbsp;
+        <label for="lname">Last Name: </label>
+        <input type="text" name='lname' required>
+        <br><br>
+        <label for="dob">Date of birth: &nbsp;&nbsp;</lable>
+        <input type="date" name='dob' required>
+        <br><br>
+        <input type="radio" name='gender' value="male">Male
+        <input type="radio" name='gender' value="female">Female
+        <input type="radio" name='gender' value="others">Others
+        <br><br>
+        <label for="parname">Father's Name: </label>
+        <input type="text" name="parname" required><br><br>
+        <label for="mobile">Mobile No.:</label>
+        <input type="tel" placeholder="+91" name='mobile' minlength="10" maxlength="10" required>
+        <br><br>
+        <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="email" name="email" placeholder="abc@domain.com" required>
+        <br><br>
+        <label for="address">Address:</label>
+        <textarea rows="3" cols="30"></textarea>
+        <br><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Academic Details</legend>
+        <label for="scholar">Scholar Type:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <select name="scholar">
+            <option>----Select----</option>
+            <option>Hosteler</option>
+            <option>Day-scholar</option>
+        </select>
+        <br><br>
+        <label for="branch">Branch:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <select name="branch">
+            <option>----Select----</option>
+            <option>CSE</option>
+            <option>ME</option>
+            <option>ECE</option>
+            <option>EEE</option>
+        </select>
+        <br><br>
+        <label for="idcard">Upload ID Card: </label>
+        <input type="file" name="idcard">
+    </fieldset>
+    <br>
+        <input type="submit" name="submit" class="submit">
+
+    
+    </form>
+</center>
+
+
+
+</body>
+</html>
