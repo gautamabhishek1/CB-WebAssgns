@@ -1,2 +1,2 @@
 ## CB-WebAssgns
-Coding Blocks Assigments
+Coding Blocks Assignments
