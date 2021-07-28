@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+}
+button {
+    width: 200px;
+    height: 50px;
+    font-size: large; 
+    border: 2px solid green;
+    color: green;
+    background-color: black;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+button:hover {
+    box-shadow: 2px 3px 3px greenyellow;
+    color: honeydew;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
