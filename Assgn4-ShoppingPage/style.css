@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    list-style-type: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+li:hover{
+    background-color: #cfd0f194;   
+}
+
+a {
+    text-decoration: none;
+    color: #005f73;
+}
+
+footer h2 {
+    font-family: 'Style Script', cursive;
+    word-spacing: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#anim {
+    height: 500px;
+    width: 90vw;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    display: flex;
+}
+
+#anim:hover {
+    animation-name: coverpic;
+    animation-iteration-count: infinite;
+}
+
+@keyframes coverpic {
+
+    
+}
+
+#prod{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+figure {
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px grey;
+       
+}
+
+figure:hover{
+    
+}
+
+figure img {
+     height: 200px;
+     width: 100%;
+}
+
+figure button {
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+figure button:hover {
+    background: lightslategray;
+    color:white;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 3px 5px rgb(209, 207, 207);
+    background-color: #e5e5e5;
+}
+
+footer {
+    margin-top: 10px;
+    height: 100px;
+    background-color: #0c4370;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width:650px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+    
+}
