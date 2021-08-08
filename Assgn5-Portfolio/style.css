@@ -1,0 +1,40 @@
+body {
+    padding-top: 60px;
+}
+
+.logo {
+    font-family: 'Style Script' ,cursive;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    margin-right: 30px;
+    padding: 10px;
+    font-size: 1.2rem
+}
+
+section {
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+
+}
+
+#about {
+    width: 90vw;
+    height: 400px;
+    
+}
+
+footer {
+    background-color: #b773f7;
+    font-family: 'Style Script' ,cursive;
+    padding: 10px;
+    font-size: 1.3rem;
+}
