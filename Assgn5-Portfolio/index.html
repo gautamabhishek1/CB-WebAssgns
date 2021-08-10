@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,24 +45,96 @@
 
       <main>
           <section id="about">
+            <h2>About me</h2>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Totam nesciunt iste id nihil eos, nulla debitis voluptate harum quam nobis deserunt 
             modi nostrum, commodi labore amet atque obcaecati. Doloribus, mollitia!
           </section>
-          <section id="about">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Totam nesciunt iste id nihil eos, nulla debitis voluptate harum quam nobis deserunt 
-            modi nostrum, commodi labore amet atque obcaecati. Doloribus, mollitia!
+
+          <section id="projects">
+            <h2>Projects</h2>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Quizbee - Quiz game
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                   Quizbee is a simple quiz game app based on Reactjs. It is having five random questions each time the game starts and after attempting those five questions, final score is displayed with a play again button.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Doctor appointment website
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    A frontend-only website based on HTML and CSS which is designed to make a website used for booking doctor appointments according to the user prefrences. Site contains a login-signup page, prefrences forms and a payment page. 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Snake Game
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                   A basic C++ based snake game created using ncurses library
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
-          <section id="about">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Totam nesciunt iste id nihil eos, nulla debitis voluptate harum quam nobis deserunt 
-            modi nostrum, commodi labore amet atque obcaecati. Doloribus, mollitia!
+          <section id="skills">
+            <h2>Skills</h2>
+            HTML
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+            </div>
+            CSS
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+            </div>
+            C++
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            </div>
+            Js
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">50%</div>
+            </div>
+          </section>
+          
+          <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
           </section>
       </main>
 
-      <footer>
-          Made By Abhishek Gautam
+      <footer class="d-flex align-items-center justify-content-center flex-column">
+        <div>Made By Abhishek Gautam</div> 
+        <div>
+          <i class="bi bi-instagram icons"></i>
+          <i class="bi bi-twitter icons"></i>
+          <i class="bi bi-facebook icons"></i>
+        </div>  
       </footer>
 </body>
 </html>
