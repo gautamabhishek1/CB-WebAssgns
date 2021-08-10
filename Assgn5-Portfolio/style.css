@@ -6,6 +6,7 @@ body {
     font-family: 'Style Script' ,cursive;
     font-size: 35px;
     font-weight: 500;
+    margin-left: 20px;
 }
 
 h2 {
@@ -13,6 +14,23 @@ h2 {
 }
 ul {
     width: 100%;
+}
+
+.part1 {
+    font-size: 3.5rem;
+}
+.part2 {
+    font-size: 1.5rem;
+    color: lightslategrey;
+}
+.part3 {
+    font-size: 1.2rem;
+    color: lightslategray;
+}
+
+.bio {
+    width: 50vw;
+    margin-top: 50px;
 }
 
 li {
@@ -31,10 +49,13 @@ section {
     box-shadow: 2px 3px 3px rgb(228, 225, 225);
 }
 
+img {
+    width: 30vw;
+}
+
 .icons {
     padding: 10px;
     cursor: pointer;
-
 }
 
 .progress {
