@@ -16,7 +16,7 @@ body {
     color: rgb(87, 83, 83);
 }
 
-input[type='text'] {
+.add_items {
     width: 500px;
     height: 45px;
     border-radius: 5px;
@@ -25,25 +25,38 @@ input[type='text'] {
     font-weight: 600;
     background: transparent;
     padding-left: 20px;
-}
-
-.todo {
-    width: 500px;
     margin: 10px auto;
+    display: block;
 }
 
-ul {
-    list-style-type: none;
+#list {
+   margin: 20px auto;
+   width: 700px;
+   padding: 5px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tasks {
+    height: 30px;
+    width: 400px;
     font-size: 1.2rem;
-    text-align: center;
-
+    margin: 5px;
+    background-color:white;
+    display: block;
+    color: black;
+    font-weight: 600;
+    opacity: 0.6;
+    border-radius: 10px;
+    padding-left: 10px;
 }
-@media screen and (max-width:800px) {
-    body {
-        background-image: url("https://images.unsplash.com/photo-1573759217464-c2dacb1cbdd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyZSUyMHdhbGxwYXBlcnN8ZW58MHwxfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-    }
-    .heading {
-         opacity: 0.3;
-         background-color: white;
-     }
+
+i {
+    font-size: large;
+    cursor: pointer;
+
 }
