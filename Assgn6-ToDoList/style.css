@@ -1,17 +1,18 @@
 
-body {
+html { 
+    background: url(./bg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("./bg.png");
-    background-size: cover;    
-}
+  }
 
 .heading {
     width: 70vw;
     border: 3px solid rgb(87, 83, 83);
-    height: 70px;
+    height: auto;
     margin: 40px auto;
     border-radius: 30px;
-    font-size: 3.5rem;
+    font-size: 3.0rem;
     text-align: center;
     color: rgb(87, 83, 83);
 }
@@ -27,6 +28,12 @@ body {
     padding-left: 20px;
     margin: 10px auto;
     display: block;
+    outline: none;
+    border-bottom: 2px solid rgb(31, 73, 129);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    
 }
 
 #list {
@@ -41,7 +48,7 @@ body {
     justify-content: space-evenly;
 }
 
-.tasks {
+.task {
     height: 30px;
     width: 400px;
     font-size: 1.2rem;
