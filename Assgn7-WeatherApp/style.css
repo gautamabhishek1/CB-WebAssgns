@@ -1,0 +1,50 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+button {
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+    margin: 1px;
+    width: 100%;
+}
+input[type=text]{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#container {
+    text-align: center;
+    border: 1px solid black;
+    width: 30vw;
+    height: 350px;
+    margin: 10% auto;
+    padding: 10px;
+}
+
+.info {
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+.temp {
+    font-size: 50px;
+    text-align: center;
+}
+
+.loc {
+    font-size: 1.5rem;
+}
+
+.type {
+    font-size: 1.2rem;
+    padding: 10px;
+}
