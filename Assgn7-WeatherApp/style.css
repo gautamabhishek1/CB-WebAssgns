@@ -2,28 +2,52 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+html { 
+    background: url(https://images.unsplash.com/photo-1611928482473-7b27d24eab80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2xvdWR5JTIwd2VhdGhlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 button {
     display: block;
-    font-size: 15px;
-    padding: 5px;
+    color: #023e8a;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #8ecae6;
+    border: 1px;
+    box-shadow: 1px 1px 2px rgb(21, 132, 223);
+    padding: 2px;
     margin: 1px;
     width: 100%;
 }
 input[type=text]{
     font-size: 20px;
+    font-weight: 800;
     width: 100%;
     text-align: center;
     margin: 10px 0;
+    color: #184e77;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid rgba(33, 94, 175, 0.829);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 #container {
     text-align: center;
-    border: 1px solid black;
+    border: 7px solid rgba(18, 85, 231, 0.452);
+    border-radius: 35px;
     width: 30vw;
-    height: 350px;
-    margin: 10% auto;
+    height: auto;
+    margin: 50px auto;
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.459);
 }
 
 .info {
@@ -33,18 +57,39 @@ input[type=text]{
 .title {
     font-size: 2.1rem;
     font-weight: 500;
+    color: #2a9d8f;
 }
 
 .temp {
     font-size: 50px;
     text-align: center;
+    color: rgb(206, 132, 21);
+    font-weight: 700;
+}
+
+.t_minmax {
+    color: rgba(179, 114, 16, 0.911)
 }
 
 .loc {
     font-size: 1.5rem;
+    font-weight: 600;
+    color: #003566;
 }
 
 .type {
     font-size: 1.2rem;
-    padding: 10px;
+    color: #003566;
+    font-weight: 600;
 }
+
+.others {
+    color: rgba(12, 53, 141, 0.849);
+    font-weight: 600;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+

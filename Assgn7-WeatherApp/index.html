@@ -5,22 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Weather</title>
 </head>
 <body>
     <section id="container">
         <div class="title">Weather</div>
         <form>
-            <input type="text" name="city" placeholder="Enter City...">
+            <input type="text" name="city" placeholder="Enter City..." autofocus>
             <button type="submit">Search</button>
         </form>
         <section class="info">
+            <div class="date"></div>
             <div class="loc"></div>
             <div class="temp"></div>
             <div class="t_minmax"></div>
             <div class="type"></div>
         </section>
-        
+        <section class="others">
+            <p class="humid"></p>
+            <p class="pressure"></p>
+        </section>
     </section>
     
     <script src="app.js"></script>
