@@ -8,6 +8,12 @@ const humanDate = document.querySelector('.date');
 const humid = document.querySelector('.humid');
 const pressure = document.querySelector('.pressure');
 
+const clearWeather = "https://img4.goodfon.com/wallpaper/nbig/e/cc/nebo-oblaka-iasnaia-pogoda-solntse-priroda.jpg";
+const cloudyWeather = "https://www.wallpapertip.com/wmimgs/174-1740905_cloudy-weather-wallpaper-hd.jpg";
+const haze = "https://images.unsplash.com/36/STzPBJUsSza3mzUxiplj_DSC09775.JPG?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGF6ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80";
+const drizzle = "https://images.unsplash.com/photo-1519692933481-e162a57d6721?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cmFpbnxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
+
+
 function getWeather(city){
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
     .then((res)=>{
@@ -39,7 +45,19 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
         type.textContent = `${w_type}`;
         humid.textContent = `Humidity: ${w_humid}%`;
         pressure.textContent = `Pressure: ${w_pres} hPa`;
-    
+
+        if(w_type=='Clouds'){
+            document.body.style.backgroundImage = `url(${cloudyWeather})`;
+        }
+        if(w_type=='Clear'){
+            document.body.style.backgroundImage = `url(${clearWeather})`;
+        }
+        if(w_type=='Haze' || w_type=='Mist'){
+            document.body.style.backgroundImage = `url(${haze})`;
+        }
+        if(w_type=='Drizzle' || w_type=='Rain'){
+            document.body.style.backgroundImage = `url(${drizzle})`;
+        }
     })
     
     .catch((err)=>{

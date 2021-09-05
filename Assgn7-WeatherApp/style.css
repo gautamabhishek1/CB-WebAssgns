@@ -4,8 +4,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-html { 
-    background: url(https://images.unsplash.com/photo-1611928482473-7b27d24eab80?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2xvdWR5JTIwd2VhdGhlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80) no-repeat center center fixed; 
+body { 
+    background: url() no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,6 +19,7 @@ button {
     font-weight: 700;
     background-color: #8ecae6;
     border: 1px;
+    border-radius: 10px;
     box-shadow: 1px 1px 2px rgb(21, 132, 223);
     padding: 2px;
     margin: 1px;
@@ -57,18 +58,20 @@ input[type=text]{
 .title {
     font-size: 2.1rem;
     font-weight: 500;
-    color: #2a9d8f;
+    color: #184e77;
 }
 
 .temp {
     font-size: 50px;
     text-align: center;
-    color: rgb(206, 132, 21);
+    color: #178536;
     font-weight: 700;
 }
 
 .t_minmax {
-    color: rgba(179, 114, 16, 0.911)
+    color: #248277;
+    font-weight: 600;
+    font-size: large;
 }
 
 .loc {
