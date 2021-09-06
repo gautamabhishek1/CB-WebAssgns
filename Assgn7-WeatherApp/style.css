@@ -96,3 +96,20 @@ input[type=text]{
 
 }
 
+@media screen and (max-width:700px) {
+    #container {
+        width: 60vw;
+    }
+    .title {
+         font-size: 1.8rem;
+     }
+
+     .temp {
+         font-size: 2rem;
+     }
+     
+     .t_minmax, .date {
+         font-size: 12px;
+     }
+
+}
