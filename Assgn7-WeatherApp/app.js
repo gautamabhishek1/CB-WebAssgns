@@ -41,7 +41,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
         humanDate.textContent = `${day}, ${date} ${month} ${hr}`;
         loc.textContent = `${place}, ${country}`;
         temp.textContent = `${tempData.toFixed(1)} °C`;
-        t_minmax.textContent = `Hi: ${mintemp.toFixed(1)}°C | Lo: ${maxtemp.toFixed(1)}°C`;
+        t_minmax.textContent = `Hi: ${maxtemp.toFixed(1)}°C | Lo: ${mintemp.toFixed(1)}°C`;
         type.textContent = `${w_type}`;
         humid.textContent = `Humidity: ${w_humid}%`;
         pressure.textContent = `Pressure: ${w_pres} hPa`;
