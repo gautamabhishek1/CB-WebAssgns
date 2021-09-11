@@ -46,7 +46,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}
         humid.textContent = `Humidity: ${w_humid}%`;
         pressure.textContent = `Pressure: ${w_pres} hPa`;
 
-        if(w_type=='Clouds'){
+        if(w_type=='Clouds' || 'Thunderstorm'){
             document.body.style.backgroundImage = `url(${cloudyWeather})`;
         }
         if(w_type=='Clear'){
