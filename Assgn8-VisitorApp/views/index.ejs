@@ -1,0 +1,22 @@
+<%- include('./partials/header') %>
+
+<a href="/visitors/new" class="btn btn-primary">Add new visitor</a>
+
+<main class="container mx-auto">
+    <div class="display-5">Visitors list</div>
+    <div class="row">
+        <% for(let visitor of visitors){ %> 
+        <div class="col-lg-12">
+            <div class="mt-4">
+                <h2><%= visitor.firstname %> <%= visitor.lastname %></h2>
+                <p>Phone: <%=visitor.phone%></p>
+                <p>Email: <%=visitor.email%></p>
+                <p>Status: </p>
+            </div>
+            <a href="/edit" class="btn btn-warning "> Edit</a>
+        </div>
+        <% } %> 
+    </div>
+</main>
+
+<%- include('./partials/footer') %>

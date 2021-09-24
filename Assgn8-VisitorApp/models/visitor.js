@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
 
 const visitorSchema = new mongoose.Schema({
-    name: {
+    firstname: {
+        type: String,
+        trim: true,
+        required: true,
+    },
+    lastname: {
         type: String,
         trim: true,
         required: true,
@@ -13,9 +18,26 @@ const visitorSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,    
-    }
+    },  
+    checkedIn: {
+        type: Boolean,
+        default: true,
+    },
+    checkedOut: {
+        type: Boolean,
+        default: false,
+    },
+    createdAt: {
+        type: Date,
+    },
+    updatedAt: {
+        type: Date,
+    }, 
+},
 
-});
+ { timestamps: true }
+
+);
 
 const Visitor = mongoose.model('Visitor',visitorSchema);
 

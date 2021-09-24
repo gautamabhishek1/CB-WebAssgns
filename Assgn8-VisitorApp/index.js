@@ -4,6 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const seedDb = require('./seed');
+const Visitor = require('./models/visitor');
 
 mongoose.connect('mongodb://localhost:27017/visitor-db')
 .then(()=>
@@ -11,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/visitor-db')
 .catch(()=> 
     console.log('Error in database connection'));
 
-    seedDb();
+    //seedDb();
 
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'views'));
@@ -19,9 +20,27 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({ extended:true }));
 app.use(methodOverride('_method'));
 
+app.get('/',(req,res)=>{
+    res.send('connected');
+})
+app.get('/visitors', async(req,res)=>{
 
-app.get('/',(req,res) => {
-    res.render('home');
+    const visitors = await Visitor.find();
+    res.render('index',{visitors});
+})
+
+app.get('/visitors/new',(req,res) => {
+    res.render('new');
+});
+
+app.post('/visitors', async(req,res)=>{
+
+    const newVisitor = {
+        ...req.body
+    }
+
+    await Visitor.create(newVisitor);
+    res.redirect('/visitors');
 });
 
 

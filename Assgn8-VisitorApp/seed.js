@@ -2,14 +2,22 @@ const Visitor = require('./models/visitor');
 
 const visitors = [
     {
-        name: 'Abhishek',
+        firstname: 'Abhishek',
+        lastname: 'Gautam',
         phone: 9887687877,
-        email: 'test1@ex.com'
+        email: 'test1@ex.com',
+        checkedIn: true,
+        checkedOut: true,
+        // createdAt: ,
+        // updatedAt: ,
     },
     {
-        name: 'Person 2',
+        firstname: 'Person',
+        lastname: '2',
         phone: 8796786785,
-        email: "test2@ex.com"
+        email: "test2@ex.com",
+        checkedIn: true,
+        checkedOut: true,
     },
 
 ];
