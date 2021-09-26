@@ -19,13 +19,8 @@ const visitorSchema = new mongoose.Schema({
         type: String,
         required: true,    
     },  
-    checkedIn: {
-        type: Boolean,
-        default: true,
-    },
-    checkedOut: {
-        type: Boolean,
-        default: false,
+    check: {
+        type: String,  
     },
     createdAt: {
         type: Date,

@@ -1,7 +1,8 @@
 
 .title {
     text-align: center;
-    font-size: 3rem; 
+    font-size: 2.7rem; 
+    margin-bottom: 30px;
 }
 
 .home {
@@ -17,4 +18,20 @@
 
 .submitBtn {
     width: 50%;
+}
+
+.visitor_card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(104, 104, 104);
+}
+
+.items {
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 30%;
+}
+
+.visitor_card:hover {
+    cursor: pointer;
 }

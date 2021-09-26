@@ -8,7 +8,7 @@ const Visitor = require('./models/visitor');
 
 mongoose.connect('mongodb://localhost:27017/visitor-db')
 .then(()=>
-    console.log('DB connected'))
+    console.log('Database connected'))
 .catch(()=> 
     console.log('Error in database connection'));
 
@@ -19,6 +19,7 @@ app.set('views',path.join(__dirname,'views'));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({ extended:true }));
 app.use(methodOverride('_method'));
+
 
 app.get('/',(req,res)=>{
     res.send('connected');
@@ -42,6 +43,21 @@ app.post('/visitors', async(req,res)=>{
     await Visitor.create(newVisitor);
     res.redirect('/visitors');
 });
+
+app.get('/visitors/:id/update',async(req,res)=>{
+    const {id} = req.params;
+
+    const visitor = await Visitor.findById(id);
+    res.render('update',{visitor});
+});
+
+app.patch('/visitors/:id', async(req,res)=>{
+    const updatedVal = req.body;
+    const {id} = req.params;
+
+    await Visitor.findByIdAndUpdate(id, updatedVal);
+    res.redirect('/visitors');
+})
 
 
 

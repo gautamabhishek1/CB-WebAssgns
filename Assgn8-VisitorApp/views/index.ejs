@@ -1,19 +1,25 @@
 <%- include('./partials/header') %>
 
-<a href="/visitors/new" class="btn btn-primary">Add new visitor</a>
 
-<main class="container mx-auto">
-    <div class="display-5">Visitors list</div>
-    <div class="row">
+<main class="container">
+    <div class="display-5 mt-3 mb-3">Visitors list</div>
+    <a href="/visitors/new/" class="new btn btn-info position-absolute top-0 end-0 translate-middle mt-5">Add New Visitor</a>
+    <div class="row mx-auto">
         <% for(let visitor of visitors){ %> 
-        <div class="col-lg-12">
-            <div class="mt-4">
-                <h2><%= visitor.firstname %> <%= visitor.lastname %></h2>
-                <p>Phone: <%=visitor.phone%></p>
-                <p>Email: <%=visitor.email%></p>
-                <p>Status: </p>
+        <div class="col-lg-12 ">
+            <div class="visitor_card mt-4"> 
+                <h3 class="d-inline-block items"><%= visitor.firstname %> <%= visitor.lastname %></h3>
+                <p class="d-inline-block items"><strong>Phone:</strong> <%=visitor.phone%></p>
+                <p class="d-inline-block items"><strong>Email: </strong> <%=visitor.email%></p>
+                <p class="items">Status:
+                    <% if(visitor.check=='in') { %>
+                        <b>Checked-In</b>
+                        <% } else { %>
+                        <b>Checked-Out</b>
+                    <% } %>       
+                </p>
             </div>
-            <a href="/edit" class="btn btn-warning "> Edit</a>
+            <a href="/visitors/<%= visitor._id %>/update" class="btn btn-warning edit_button">Update Status</a>
         </div>
         <% } %> 
     </div>
