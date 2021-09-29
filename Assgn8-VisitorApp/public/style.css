@@ -35,3 +35,16 @@
 .visitor_card:hover {
     cursor: pointer;
 }
+
+.date {
+    font-size: 2.5rem;
+}
+
+.time {
+    font-size: 2rem;
+}
+
+.dt {
+    width: 100vw;
+    text-align: center;
+}
