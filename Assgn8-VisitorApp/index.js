@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
+const dotenv = require("dotenv").config({path: __dirname + '/.env'});
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const seedDb = require('./seed');
 const Visitor = require('./models/visitor');
+const mail = require("./sendgrid");
+
 
 mongoose.connect('mongodb://localhost:27017/visitor-db')
 .then(()=>
@@ -41,6 +44,10 @@ app.post('/visitors', async(req,res)=>{
     }
 
     await Visitor.create(newVisitor);
+
+    const {email,firstname,check} = req.body;
+    mail(email,firstname,check);
+
     res.redirect('/visitors');
 });
 
@@ -48,14 +55,18 @@ app.get('/visitors/:id/update',async(req,res)=>{
     const {id} = req.params;
 
     const visitor = await Visitor.findById(id);
+
     res.render('update',{visitor});
 });
 
 app.patch('/visitors/:id', async(req,res)=>{
     const updatedVal = req.body;
+    const {email,firstname,check} = req.body;
     const {id} = req.params;
 
     await Visitor.findByIdAndUpdate(id, updatedVal);
+    mail(email,firstname,check);
+
     res.redirect('/visitors');
 })
 
