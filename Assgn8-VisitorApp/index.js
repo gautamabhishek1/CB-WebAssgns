@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const seedDb = require('./seed');
 const Visitor = require('./models/visitor');
 const mail = require("./sendgrid");
-
+const sms = require("./send_sms");
 
 mongoose.connect('mongodb://localhost:27017/visitor-db')
 .then(()=>
@@ -45,9 +45,9 @@ app.post('/visitors', async(req,res)=>{
 
     await Visitor.create(newVisitor);
 
-    const {email,firstname,check} = req.body;
+    const {phone,email,firstname,check} = req.body;
     mail(email,firstname,check);
-
+    sms(phone);
     res.redirect('/visitors');
 });
 
